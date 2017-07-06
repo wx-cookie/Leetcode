@@ -17,7 +17,17 @@ class Solution(object):
 			x = x/10
 		return res*flag
 
+	def reverse_new(self, x):
+		flag = 1 if x>0 else -1
+		res, x, y = 0, abs(x), 0
+		while x:
+			y = x%10
+			res = res*10+y
+			if res > 2147483647:
+				return 0
+			x = x/10
+		return res*flag
 
 if __name__=='__main__':
 	so = Solution()
-	print so.reverse(1534236469)		
+	print so.reverse_new(21474836475)		
