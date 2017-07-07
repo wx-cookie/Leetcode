@@ -16,10 +16,7 @@ class Solution(object):
 					stac.pop()
 				else:
 					return False
-		if stac == []:
-			return True
-		else:
-			return False
+		return True if stac==[] else False
 
 
 if __name__=='__main__':
